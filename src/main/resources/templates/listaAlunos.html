@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Apisys</title>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+<div class="container">
+<div id="listaAlunos">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Curso</th>
+            <th>Matricula</th>
+            <th>Semestre</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tr th:each="aluno : ${alunos}">
+            <td> <span th:text="${aluno.nome}"></span> </td>
+            <td> <span th:text="${aluno.curso.nome}"></span> </td>
+            <td> <span th:text="${aluno.matricula}"></span> </td>
+            <td> <span th:text="${aluno.semestre}"></span> </td>
+            <td> <span th:text="${aluno.status}"></span> </td>
+            <td> <a th:href="@{editAluno/{id}(id=${aluno.id})}" class="btn btn-info">Editar</a> </td>  
+            <td> <a th:href="@{deleteAluno/{id}(id=${aluno.id})}" class="btn btn-danger">Delete</a> </td>       
+        </tr>
+    </table>
+</div>
+
+<br/>
+   <div align="left">
+       <a href="addAluno" class="btn btn-primary">Adicionar aluno</a>
+   </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
