@@ -57,6 +57,57 @@ public class Aluno {
 		this.status = status;
 	}
 	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((curso == null) ? 0 : curso.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + matricula;
+		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
+		result = prime * result + semestre;
+		result = prime * result + ((status == null) ? 0 : status.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Aluno other = (Aluno) obj;
+		if (curso == null) {
+			if (other.curso != null)
+				return false;
+		} else if (!curso.equals(other.curso))
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (matricula != other.matricula)
+			return false;
+		if (nome == null) {
+			if (other.nome != null)
+				return false;
+		} else if (!nome.equals(other.nome))
+			return false;
+		if (semestre != other.semestre)
+			return false;
+		if (status != other.status)
+			return false;
+		return true;
+	}
+	@Override
+	public String toString() {
+		return "Aluno [id=" + id + ", nome=" + nome + ", curso=" + curso
+				+ ", matricula=" + matricula + ", semestre=" + semestre
+				+ ", status=" + status + "]";
+	}
+	
 	
 	
 

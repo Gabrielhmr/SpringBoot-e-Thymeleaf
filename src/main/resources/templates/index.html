@@ -3,22 +3,31 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Apisys</title>
-        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     </head>
     <body>
+    <nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" th:href="@{/}">Apisys</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      <li><a th:href="@{/}">Home</a></li>
+		      <li><a th:href="@{listaCursos}">Cursos</a></li>
+		      <li><a th:href="@{listaAlunos}">Alunos</a></li>
+		    </ul>
+		  </div>
+	</nav>
     <div class="container">
         <div class="jumbotron" align="center" style="margin-top: 50px;">
             <h1>Seja bem-vindo ao Apisys</h1>
-            <div >
-                <a href="listaAlunos" class="btn btn-lg btn-primary">Clique aqui para ver a lista de alunos</a>
-            </div>
+
+            <p> Sistema para cadastro,leitura,edição e deleção de Alunos e Cursos</p>
             <br/>
-            <div>
-                <a href="listaCursos" class="btn btn-lg btn-primary">Clique aqui para ver a lista de cursos</a>
-            </div>
+
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
     </body>
 </html>

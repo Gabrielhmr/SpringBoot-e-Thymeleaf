@@ -14,15 +14,6 @@ public class Curso {
 	private String nome;
 	private String instituicao;	
 
-	public Curso() {
-	}
-
-	public Curso(String codigo, String nome, String instituicao) {
-		this.codigo = codigo;
-		this.nome = nome;
-		this.instituicao = instituicao;
-	}
-
 	public Long getId() {
 		return id;
 	}
@@ -54,7 +45,7 @@ public class Curso {
 	public void setInstituicao(String instituicao) {
 		this.instituicao = instituicao;
 	}
-
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

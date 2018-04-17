@@ -6,6 +6,18 @@
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
+    <nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" th:href="@{/}">Apisys</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		       <li><a th:href="@{/}">Home</a></li>
+		      <li><a th:href="@{listaCursos}">Cursos</a></li>
+		      <li><a th:href="@{listaAlunos}">Alunos</a></li>
+		    </ul>
+		  </div>
+	</nav>
 <div class="container">
 <div id="formCursos">
     <form th:action="@{/salvarCurso}" th:object="${curso}" method="post" >
@@ -13,16 +25,16 @@
          <input type="hidden" class="form-control" th:field="${curso.id}"/>
     </div>
     <div class="form-group">
-        <label for="codigo">Codigo</label>
-        <input type="text" th:field="${curso.codigo}" class="form-control" id="codigo" name="codigo" placeholder="Codigo" />
+        <label for="codigo">Código</label>
+        <input type="text" th:field="${curso.codigo}" class="form-control" id="codigo" name="codigo" placeholder="Código" />
     </div>
       <div class="form-group">
         <label for="nome">Nome</label>
         <input type="text" th:field="${curso.nome}" class="form-control" id="nome" name="nome" placeholder="Nome" />
     </div>
       <div class="form-group">
-        <label for="instituicao">Instituicao</label>
-        <input type="text" th:field="${curso.instituicao}" class="form-control" id="instituicao" name="instituicao" placeholder="Instituicao" />
+        <label for="instituicao">Instituição</label>
+        <input type="text" th:field="${curso.instituicao}" class="form-control" id="instituicao" name="instituicao" placeholder="Instituição" />
     </div>
     <button type="submit" class="btn btn-success">Salvar</button>
 </form>

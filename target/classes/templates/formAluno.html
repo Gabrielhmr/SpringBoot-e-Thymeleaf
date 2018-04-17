@@ -6,6 +6,18 @@
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
+    <nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" th:href="@{/}">Apisys</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		       <li><a th:href="@{/}">Home</a></li>
+		      <li><a th:href="@{listaCursos}">Cursos</a></li>
+		      <li><a th:href="@{listaAlunos}">Alunos</a></li>
+		    </ul>
+		  </div>
+	</nav>
 <div class="container">
 <div id="formAlunos">
     <form th:action="@{/salvarAluno}" th:object="${aluno}" method="post" >
@@ -26,12 +38,12 @@
       
     <div class="form-group">
         <label for="matricula">Matricula</label>
-        <input type="text" th:field="${aluno.matricula}" class="form-control" id="matricula" name="matricula" placeholder="matricula" />
+        <input type="text" th:field="${aluno.matricula}" class="form-control" id="matricula" name="matricula" placeholder="Matricula" />
     </div>
     
      <div class="form-group">
         <label for="semestre">Semestre</label>
-        <input type="text" th:field="${aluno.semestre}" class="form-control" id="semestre" name="semestre" placeholder="semestre" />
+        <input type="text" th:field="${aluno.semestre}" class="form-control" id="semestre" name="semestre" placeholder="Semestre" />
     </div>
     
       <div class="form-group">
